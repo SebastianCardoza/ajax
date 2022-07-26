@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <h1 class="col-2">DojoWeather</h1>
+        <div class="col-1 cities">
+            <span class="city" onclick="getTemps('burbank')">Burbank</span>
+            <span class="city" onclick="getTemps('chicago')">Chicago</span>
+            <span class="city" onclick="getTemps('dallas')">Dallas</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row firstbar">
+            <h1 class="col-3 city_header">San Jose</h1>
+            <div class="col-2 tempbar">
+                <p>show temperature in: </p>
+                <select name="temperature" id="temperature" onchange="changeTemp(this)">
+                    <option value="c">°C</option>
+                    <option value="f">°F</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 column weatherCard mr">
+                <h2>Today</h2>
+                <img class="wimage" src="assets/some_rain.png" alt="some rain">
+                <p>some rain</p>
+                <div class="row tt">
+                    <p class="col-1 temp1" id="t0">24°</p>
+                    <p class="col-1 temp2" id="t1">18°</p>
+                </div>
+            </div>
+            <div class="col-1 column weatherCard mr">
+                <h2>Tomorrow</h2>
+                <img class="wimage" src="assets/some_sun.png" alt="some rain">
+                <p>some sun</p>
+                <div class="row tt">
+                    <p class="col-1 temp1" id="t2">27°</p>
+                    <p class="col-1 temp2" id="t3">19°</p>
+                </div>
+            </div>
+            <div class="col-1 column weatherCard mr">
+                <h2>Friday</h2>
+                <img class="wimage" src="assets/some_clouds.png" alt="some rain">
+                <p>some clouds</p>
+                <div class="row tt">
+                    <p class="col-1 temp1" id="t4">21°</p>
+                    <p class="col-1 temp2" id="t5">16°</p>
+                </div>
+            </div>
+            <div class="col-1 column weatherCard">
+                <h2>Saturday</h2>
+                <img class="wimage" src="assets/some_sun.png" alt="some rain">
+                <p>some sun</p>
+                <div class="row tt">
+                    <p class="col-1 temp1" id="t6">26°</p>
+                    <p class="col-1 temp2" id="t7">21°</p>
+                </div>
+            </div>
+        </div>
+        <div class="cookie row">
+            <div class="col-1 ii">
+                <img src="assets/cookie.png" alt="cookie" class="cimage">
+            </div>
+            <div class="column col-3">
+                <h4>Stop! Cookie Time</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="">Read more...</a></p>
+            </div>
+            <div class="col-1 uu">
+                <button class="accept" onclick="accept()">I Accept</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
